@@ -1,0 +1,5 @@
+.circuit-table thead *{
+    font-weight: bold;
+    background-color: rgb(247, 247, 244);
+    border-bottom:  1px solid;
+}

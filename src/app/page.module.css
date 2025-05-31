@@ -6,14 +6,13 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
+
   min-height: 100svh;
-  padding: 80px;
+  width: 100vw;
+  height: 100vh;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,10 +27,7 @@
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  background-color: #f2f2f2;
 }
 
 .main ol {
@@ -56,30 +52,6 @@
   font-weight: 600;
 }
 
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
 
 a.primary {
   background: var(--foreground);
@@ -161,8 +133,17 @@ a.secondary {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+
+.map-container {
+  /* height: 800px; */
+  width: 100%;
+}
+
+.panel {
+  padding: 10px 20px 30px 20px;
+  margin: 20px 20px 20px 20px !important; 
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: white;
+  
 }
