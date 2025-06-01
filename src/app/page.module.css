@@ -65,13 +65,12 @@ a.secondary {
 }
 
 .footer {
-  grid-row-start: 3;
-  display: flex;
   gap: 24px;
+  text-align: center;
 }
 
 .footer a {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   gap: 8px;
 }
@@ -114,7 +113,7 @@ a.secondary {
 
   .ctas {
     flex-direction: column;
-  }
+ }
 
   .ctas a {
     font-size: 14px;
@@ -127,7 +126,6 @@ a.secondary {
   }
 
   .footer {
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
   }

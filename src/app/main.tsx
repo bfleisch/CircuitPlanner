@@ -73,7 +73,7 @@ function Panel ({children}: {children: ReactNode})
 
             <Panel><FLARMGeneratorPanel circuit={circuitState}/></Panel>
 
-            <Box component="footer" sx={{ textAlign: "center", mt: 4, color: "#888", fontSize: 14 }}>
+            <Box component="footer" className={styles.footer}>
               <Typography variant="body2" color="inherit" component="span">
                 © {new Date().getFullYear()} Bruno Fleisch — GitHub:{" "}
                 <Link
@@ -88,6 +88,8 @@ function Panel ({children}: {children: ReactNode})
                 </Link>
               </Typography>
             </Box>
+
+            
         </Stack>
       </main>
 
