@@ -14,6 +14,10 @@ export default function FLARMGeneratorPanel({ circuit }: { circuit: CircuitType 
   const [aircraft, setAircraft] = useState("");
 
   const handleGenerate = () => {
+
+
+  const escapeWpName = (x: string) => x.replaceAll(/[,\s]/g, '');
+
     // Each instruction as a separate $PFLAC directive
     const lines = [
       `$PFLAC,S,PILOT,${pilotId.slice(0,47)}`,
@@ -23,7 +27,7 @@ export default function FLARMGeneratorPanel({ circuit }: { circuit: CircuitType 
 
       ...(circuit.waypoints || []).map(
         (wp: WaypointType) =>
-          `$PFLAC,S,ADDWP,${decimalToCoord (wp.lat, true)},${decimalToCoord(wp.lon, false)},${wp.name.slice(0,50)}`
+          `$PFLAC,S,ADDWP,${decimalToCoord (wp.lat, true).replace('.','')},${decimalToCoord(wp.lon, false).replace('.','')},${escapeWpName(wp.name.slice(0,50))}`
       ),
       `$PFLAC,S,ADDWP,0000000N,00000000E`,
     ];
