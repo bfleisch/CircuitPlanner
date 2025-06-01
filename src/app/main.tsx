@@ -26,6 +26,7 @@ import React, { ReactNode,   useReducer,} from "react";
 import { circuitReducer } from "./lib/circuitReducer";
 import { Stack } from "@mui/material";
 import FLARMGeneratorPanel from "./components/FLARMGeneratorPanel";
+import { Typography, Link, Box } from "@mui/material";
 
 
 
@@ -72,6 +73,21 @@ function Panel ({children}: {children: ReactNode})
 
             <Panel><FLARMGeneratorPanel circuit={circuitState}/></Panel>
 
+            <Box component="footer" sx={{ textAlign: "center", mt: 4, color: "#888", fontSize: 14 }}>
+              <Typography variant="body2" color="inherit" component="span">
+                © {new Date().getFullYear()} Bruno Fleisch — GitHub:{" "}
+                <Link
+                  href="https://github.com/bfleisch/CircuitPlanner"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{ mx: 1 }}
+                  color="inherit"
+                  underline="hover"
+                >
+                  https://github.com/bfleisch/CircuitPlanner
+                </Link>
+              </Typography>
+            </Box>
         </Stack>
       </main>
 
